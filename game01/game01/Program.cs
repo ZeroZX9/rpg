@@ -1,3 +1,3 @@
 
-var hp = 0;
+var hp = 5;
 
