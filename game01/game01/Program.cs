@@ -1,18 +1,48 @@
+using game01.Data;
+using game01.Data.Repositories;
+using game01.Models;
+using game01.Models.Creatures;
 using System.Runtime.InteropServices;
 
-static void Main(string[] args) 
+var databaseProcessor = new DatabaseProcessor(DatabaseProcessor.Database.Local);
+var comando = EscolherComando();
+
+while (comando != "Z")
 {
-    creature goblin = new creature();
-}
-public class creature {
-    string name { get; set; }
-    int hp { get; set; }
-    int def { get; set; }
-    int mp { get; set; }
-    int atk { get; set; }
-    int spd { get; set; }
-    int xp { get; set; }
-    int lvl { get; set; }
+    if (comando == "1")
+    {
+        Console.WriteLine("Qual o nome da Criatura?");
+        var nome = Console.ReadLine();
+        var creature = new Creature(nome);
 
+        Console.WriteLine("Qual o hp da Criatura?");
+        var hp = int.Parse(Console.ReadLine());
+        creature.SetHp(hp);
+
+        databaseProcessor.InsertCreature(creature);
+
+    }
+
+    if (comando == "2")
+    {
+        var creatures = databaseProcessor.GetCreatures();
+        foreach (var creature in creatures)
+        {
+            Console.WriteLine(creature);
+        }
+    }
+
+    comando = EscolherComando();
 }
 
+
+
+string EscolherComando()
+{
+    Console.WriteLine("O que deseja fazer?");
+
+    Console.WriteLine("1 - Criar Criatura ");
+    Console.WriteLine("2 - Listar Criaturas ");
+    Console.WriteLine("Z - Sair ");
+    return Console.ReadLine().ToUpper();
+}
