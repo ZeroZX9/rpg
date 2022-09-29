@@ -31,7 +31,26 @@ namespace game01.Models
         {
             Hp = hp;
         }
-
+        public void SetMp(int mp)
+        {
+            Mp = mp;
+        }
+        public void SetDef(int def)
+        {
+            Def = def;
+        }
+        public void SetAtk(int atk)
+        {
+            Atk = atk;
+        }
+        public void SetSpd(int spd)
+        {
+            Spd = spd;
+        }
+        public void SetXp(int xp)
+        {
+            Xp = xp;
+        }
         public override string ToString()
         {
             return $"Id: {Id} - Nome: {Name} - Hp: {Hp}";
@@ -39,7 +58,11 @@ namespace game01.Models
 
         public virtual void TomarGolpe(int dano)
         {
-            Hp -= dano;
+            if (dano <= 0) 
+                {
+                dano = 0;
+            }
+            Hp -= (dano-Def);
         }
     }
 }
