@@ -58,11 +58,14 @@ namespace game01.Models
 
         public virtual void TomarGolpe(int dano)
         {
-            if (dano <= 0) 
-                {
+            if (dano <= 0)
+            {
                 dano = 0;
             }
-            Hp -= (dano-Def);
+            else 
+            {
+                Hp -= (dano - Def);
+            }
         }
     }
 }
