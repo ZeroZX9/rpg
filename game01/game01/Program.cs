@@ -3,8 +3,9 @@ using game01.Data.Repositories;
 using game01.Models;
 using game01.Models.Creatures;
 using System.Runtime.InteropServices;
+using System.Text.Json;
 
-var databaseProcessor = new DatabaseProcessor(DatabaseProcessor.Database.Local);
+var databaseProcessor = new DatabaseProcessor(DatabaseProcessor.Database.File);
 var comando = EscolherComando();
 
 while (comando != "Z")

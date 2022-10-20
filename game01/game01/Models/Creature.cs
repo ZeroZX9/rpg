@@ -9,14 +9,14 @@ namespace game01.Models
     internal class Creature
     {
         public int Id { get; set; }
-        private string Name { get; set; }
-        private int Hp { get; set; }
-        private int Def { get; set; }
-        private int Mp { get; set; }
-        private int Atk { get; set; }
-        private int Spd { get; set; }
-        private int Xp { get; set; }
-        private int Lvl { get; set; }
+        public string Name { get; set; }
+        public int Hp { get; set; }
+        public int Def { get; set; }
+        public int Mp { get; set; }
+        public int Atk { get; set; }
+        public int Spd { get; set; }
+        public int Xp { get; set; }
+        public int Lvl { get; set; }
 
         public Creature()
         {
@@ -67,5 +67,6 @@ namespace game01.Models
                 Hp -= (dano - Def);
             }
         }
+
     }
 }

@@ -9,7 +9,7 @@ namespace game01.Models
     internal class Items
     {
         public int Id { get; set; }
-        private string NameIT { get; set; }
+        private string Name { get; set; }
         private int DefValue { get; set; }
         private int MpValue { get; set; }
         private int AtkValue { get; set; }
@@ -18,7 +18,7 @@ namespace game01.Models
 
         public Items(string name)
         {
-            NameIT = name;
+            Name = name;
         }
     }
 }

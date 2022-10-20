@@ -1,0 +1,46 @@
+[
+  {
+    "Id": 0,
+    "Name": "leandro",
+    "Hp": 100,
+    "Def": 0,
+    "Mp": 0,
+    "Atk": 0,
+    "Spd": 0,
+    "Xp": 0,
+    "Lvl": 0
+  },
+  {
+    "Id": 0,
+    "Name": "Jo\u00E3o",
+    "Hp": 150,
+    "Def": 0,
+    "Mp": 0,
+    "Atk": 0,
+    "Spd": 0,
+    "Xp": 0,
+    "Lvl": 0
+  },
+  {
+    "Id": 3,
+    "Name": "Jos\u00E9",
+    "Hp": 230,
+    "Def": 0,
+    "Mp": 0,
+    "Atk": 0,
+    "Spd": 0,
+    "Xp": 0,
+    "Lvl": 0
+  },
+  {
+    "Id": 4,
+    "Name": "Ailton",
+    "Hp": 120,
+    "Def": 0,
+    "Mp": 0,
+    "Atk": 0,
+    "Spd": 0,
+    "Xp": 0,
+    "Lvl": 0
+  }
+]
